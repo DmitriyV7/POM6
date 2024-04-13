@@ -174,5 +174,6 @@ public class CartPage extends HomePage {
         placeOrderBtn.click();
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
+
     }
 }
