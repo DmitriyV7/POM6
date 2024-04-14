@@ -30,6 +30,7 @@ public class Driver {
                     driver = new ChromeDriver(options);
                     break;
                 case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 case "edge":
