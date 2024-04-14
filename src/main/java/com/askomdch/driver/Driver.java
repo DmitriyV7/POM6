@@ -5,6 +5,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
 
@@ -30,7 +31,6 @@ public class Driver {
                     driver = new ChromeDriver(options);
                     break;
                 case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 case "edge":
