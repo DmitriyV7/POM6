@@ -1,6 +1,5 @@
 package com.askomdch.base_test;
 
-
 import com.askomdch.config.ConfigReader;
 import com.askomdch.driver.Driver;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -9,13 +8,14 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-
 import java.io.File;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
