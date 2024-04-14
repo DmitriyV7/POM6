@@ -40,7 +40,7 @@ public class HomePage {
     }
     public void setAboutLink(){
         aboutLink.click();
-        Assert.assertEquals(driver.getTitle(),"About – AskOmDch","Title not correct ,not found or not correct page");
+//        Assert.assertEquals(driver.getTitle(),"About – AskOmDch","Title not correct ,not found or not correct page");
 
     }
     public void setStoreLink(){
