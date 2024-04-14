@@ -34,13 +34,14 @@ public class HomePage {
 
 
 
-    public void setAccountLink(){
-//        Assert.assertEquals(driver.getTitle(),"AskOmDch – Become a Selenium automation expert!","Title not correct ,not found or not correct page");
+    public void setAccountLink() throws InterruptedException {
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getTitle(),"AskOmDch – Become a Selenium automation expert!","Title not correct ,not found or not correct page");
         accountLink.click();
     }
     public void setAboutLink(){
         aboutLink.click();
-//        Assert.assertEquals(driver.getTitle(),"About – AskOmDch","Title not correct ,not found or not correct page");
+        Assert.assertEquals(driver.getTitle(),"About – AskOmDch","Title not correct ,not found or not correct page");
 
     }
     public void setStoreLink(){
