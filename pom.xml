@@ -73,8 +73,8 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>/test_runner/smoke.xml</suiteXmlFile>
-                        <suiteXmlFile>/test_runner/regression.xml</suiteXmlFile>
+                        <suiteXmlFile>test_runner/smoke.xml</suiteXmlFile>
+                        <suiteXmlFile>test_runner/regression.xml</suiteXmlFile>
 
                     </suiteXmlFiles>
                     <properties>
