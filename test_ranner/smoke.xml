@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="REGRESSION TEST SUITE" thread-count="1" parallel="methods">
-    <test name="REGRESSION TESTS">
+<suite name="SMOKE TEST SUITE" thread-count="1" parallel="methods">
+    <test name="SMOkE TESTS">
         <classes>
             <class name="com.askomdch.tests.LoginTest">
 
             </class>
             <class name="com.askomdch.tests.PlaceOrderTest"/>
-            </classes>
+        </classes>
     </test>
 </suite>
