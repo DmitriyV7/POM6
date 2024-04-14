@@ -74,6 +74,8 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>C:\Users\verkh\IdeaProjects\pom6\test_ranner\smoke.xml</suiteXmlFile>
+                        <suiteXmlFile>C:\Users\verkh\IdeaProjects\pom6\test_ranner\regression.xml</suiteXmlFile>
+
                     </suiteXmlFiles>
                     <properties>
                         <property>
