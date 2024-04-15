@@ -24,7 +24,8 @@ public class Driver {
                     options.addArguments("--headless"); // Run in headless mode
                     options.addArguments("--no-sandbox"); // Bypass OS security model
                     options.addArguments("--disable-gpu"); // Applicable to windows os only
-                    options.addArguments("--start-maximized"); // Maximize the browser on start
+                    options.addArguments("--window-size=1920,1080");
+//                    options.addArguments("--start-maximized"); // Maximize the browser on start
                     options.addArguments("--enable-automation");
                     options.addArguments("--disable-infobars");
                     options.addArguments("--disable-dev-shm-usage");
