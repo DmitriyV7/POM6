@@ -18,6 +18,7 @@ public class PlaceOrderTest extends BaseTest {
         StorePage storePage = new StorePage(driver);
         CartPage cartPage = new CartPage(driver);
         Thread.sleep(2000);
+        homePage.setHomePageLink();
         homePage.setStoreLink();
         extentTest.log(LogStatus.PASS,"User opened the Store page successfully");
         storePage.storePageOrder(data);

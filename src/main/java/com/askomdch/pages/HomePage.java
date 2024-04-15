@@ -32,17 +32,21 @@ public class HomePage {
     @FindBy(id = "ast-site-header-cart")
     protected WebElement cartBtn;
 
+    public void setHomePageLink(){
+        Assert.assertEquals(driver.getTitle(),"AskOmDch – Become a Selenium automation expert!","Not Displayed");
+    }
+
 
 
     public void setAccountLink() {
         accountLink.click();
-
     }
+
     public void setAboutLink(){
         aboutLink.click();
         Assert.assertEquals(driver.getTitle(),"About – AskOmDch","Title not correct ,not found or not correct page");
-
     }
+
     public void setStoreLink() {
         storeLink.click();
         Assert.assertEquals(driver.getTitle(),"Products – AskOmDch","Title not correct ,not found or not correct page");
