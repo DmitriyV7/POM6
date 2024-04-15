@@ -47,6 +47,7 @@ public class HomePage {
     }
 
     public void setStoreLink() {
+        WebElement storeLink = driver.findElement(By.linkText("Store"));
         storeLink.click();
         Assert.assertEquals(driver.getTitle(),"Products – AskOmDch","Title not correct ,not found or not correct page");
     }
