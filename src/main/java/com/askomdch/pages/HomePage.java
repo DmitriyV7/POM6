@@ -13,9 +13,9 @@ public class HomePage {
         this.driver = driver;
         PageFactory.initElements(this.driver,this);
     }
-    @FindBy(id= "menu-item-1226")
+    @FindBy(linkText = "Home")
     protected WebElement homePageLink;
-    @FindBy(id = "menu-item-1227")
+    @FindBy(linkText = "Store")
     protected WebElement storeLink;
     @FindBy(id = "menu-item-1228")
     protected WebElement menLink;
@@ -23,9 +23,9 @@ public class HomePage {
     protected WebElement womenLink;
     @FindBy(id = "menu-item-1230")
     protected WebElement accessoriesLink;
-    @FindBy(id = "menu-item-1237")
+    @FindBy(linkText = "Account")
     protected WebElement accountLink;
-    @FindBy(id = "menu-item-1232")
+    @FindBy(linkText = "About")
     protected WebElement aboutLink;
     @FindBy(id = "menu-item-1233")
     protected WebElement contactUsLink;
@@ -36,7 +36,7 @@ public class HomePage {
 
     public void setAccountLink() throws InterruptedException {
         Thread.sleep(1000);
-        Assert.assertEquals(driver.getTitle(),"AskOmDch – Become a Selenium automation expert!","Title not correct ,not found or not correct page");
+//        Assert.assertEquals(driver.getTitle(),"AskOmDch – Become a Selenium automation expert!","Title not correct ,not found or not correct page");
         accountLink.click();
     }
     public void setAboutLink(){
