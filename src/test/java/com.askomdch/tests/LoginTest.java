@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 public class LoginTest extends BaseTest {
-//    @Test(dataProvider = "login")
+    @Test(dataProvider = "login")
     public void LoginTest(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Login test");
         HomePage homePage = new HomePage(driver);
