@@ -15,7 +15,7 @@ public class HomePage {
     }
     @FindBy(linkText = "Home")
     protected WebElement homePageLink;
-    @FindBy(linkText = "Store")
+    @FindBy(xpath = "//*[@id='menu-item-1227']/a")
     protected WebElement storeLink;
     @FindBy(id = "menu-item-1228")
     protected WebElement menLink;
@@ -38,6 +38,7 @@ public class HomePage {
         Thread.sleep(1000);
 //        Assert.assertEquals(driver.getTitle(),"AskOmDch – Become a Selenium automation expert!","Title not correct ,not found or not correct page");
         accountLink.click();
+
     }
     public void setAboutLink(){
         aboutLink.click();
