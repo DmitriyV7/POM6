@@ -37,6 +37,7 @@ public class HomePage {
     }
 
     public void setAccountLink() {
+        WebElement accountLink = driver.findElement(By.linkText("Account"));
         accountLink.click();
     }
 

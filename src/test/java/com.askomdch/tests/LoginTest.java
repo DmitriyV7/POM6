@@ -19,6 +19,7 @@ public class LoginTest extends BaseTest {
         extentTest = reports.startTest("Login test");
         HomePage homePage = new HomePage(driver);
         AccountPage accountPage = new AccountPage(driver);
+        homePage.setHomePageLink();
         homePage.setAccountLink();
         extentTest.log(LogStatus.PASS,"User opened the Account page successfully");
         accountPage.loginPositive(data);
