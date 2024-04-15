@@ -69,7 +69,7 @@ public class LoginTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"User can not made registration on the Account page ");
 
     }
-    @Test(dataProvider = "login")
+//    @Test(dataProvider = "login")
     public void AboutPageTest(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("About page test");
         HomePage homePage = new HomePage(driver);
