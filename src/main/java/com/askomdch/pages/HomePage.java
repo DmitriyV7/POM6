@@ -36,8 +36,6 @@ public class HomePage {
         Assert.assertEquals(driver.getTitle(),"AskOmDch – Become a Selenium automation expert!","Not Displayed");
     }
 
-
-
     public void setAccountLink() {
         accountLink.click();
     }
