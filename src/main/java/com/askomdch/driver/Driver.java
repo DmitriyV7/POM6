@@ -26,7 +26,7 @@ public class Driver {
 //                    options.addArguments("--disable-gpu"); // Applicable to windows os only
                     options.addArguments("--start-maximized"); // Maximize the browser on start
                     options.addArguments("--enable-automation");
-                    options.addArguments("--disable-infobars");
+                    options.addArguments("--disable-info bars");
                     options.addArguments("--disable-dev-shm-usage");
                     driver = new ChromeDriver(options);
                     break;
@@ -40,10 +40,10 @@ public class Driver {
                 default:
                     throw new RuntimeException("Invalid Browser type: " + browser);
             }
-            driver.manage().window().maximize();
-            driver.manage().deleteAllCookies();
-            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+//            driver.manage().window().maximize();
+//            driver.manage().deleteAllCookies();
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
             }catch (Exception e){
                 System.err.println("Error initializing WebDriver: " + e.getMessage());
             }
