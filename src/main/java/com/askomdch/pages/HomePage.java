@@ -15,7 +15,7 @@ public class HomePage {
     }
     @FindBy(linkText = "Home")
     protected WebElement homePageLink;
-    @FindBy(xpath = "//*[@id='menu-item-1227']/a")
+    @FindBy(linkText = "Store")
     protected WebElement storeLink;
     @FindBy(id = "menu-item-1228")
     protected WebElement menLink;
@@ -35,8 +35,6 @@ public class HomePage {
 
 
     public void setAccountLink() throws InterruptedException {
-        Thread.sleep(1000);
-//        Assert.assertEquals(driver.getTitle(),"AskOmDch – Become a Selenium automation expert!","Title not correct ,not found or not correct page");
         accountLink.click();
 
     }
@@ -46,7 +44,6 @@ public class HomePage {
 
     }
     public void setStoreLink() throws InterruptedException {
-        Thread.sleep(3000);
         storeLink.click();
         Assert.assertEquals(driver.getTitle(),"Products – AskOmDch","Title not correct ,not found or not correct page");
     }
