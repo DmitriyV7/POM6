@@ -19,14 +19,7 @@ public class Driver {
             switch (browser){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless"); // Run in headless mode
-                    options.addArguments("--no-sandbox"); // Bypass OS security model
-//                    options.addArguments("--disable-gpu"); // Applicable to windows os only
-                    options.addArguments("start-maximized"); // Maximize the browser on start
-                    options.addArguments("enable-automation");
-                    options.addArguments("--disable-infobars");
-                    options.addArguments("--disable-dev-shm-usage");
+                    ChromeOptions options = getChromeOptions();
                     driver = new ChromeDriver(options);
                     break;
                 case "firefox":
@@ -46,6 +39,18 @@ public class Driver {
         }
 
         return driver;
+    }
+
+    private static ChromeOptions getChromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless"); // Run in headless mode
+        options.addArguments("--no-sandbox"); // Bypass OS security model
+//                    options.addArguments("--disable-gpu"); // Applicable to windows os only
+        options.addArguments("start-maximized"); // Maximize the browser on start
+        options.addArguments("enable-automation");
+        options.addArguments("--disable-infobars");
+        options.addArguments("--disable-dev-shm-usage");
+        return options;
     }
 
     public static void quitDriver(){
