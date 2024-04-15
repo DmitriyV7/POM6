@@ -32,7 +32,7 @@ public class AccountPage extends HomePage {
     protected WebElement loginButton;
     @FindBy(xpath = "//*[@name='register']")
     protected WebElement registerBtn;
-    @FindBy(xpath = "//div[@class='woocommerce-MyAccount-content']//strong")
+    @FindBy(xpath = "//*[@class='woocommerce-MyAccount-content']//strong")
     protected WebElement loginMessage;
     @FindBy(xpath = "//*[@class= 'woocommerce-LostPassword lost_password']/a")
     protected WebElement lostPasswordLink;
@@ -92,6 +92,7 @@ public class AccountPage extends HomePage {
         newPasswordInput.sendKeys(data.get("new_password"));
         Assert.assertTrue(registerBtn.isEnabled(),"Register button not enabled");
         registerBtn.click();
+        Thread.sleep(1000);
         Assert.assertEquals(loginMessage.getText(),data.get("new_user_name"),"Is not correct Login message");
         Assert.assertTrue(logoutBtn.isDisplayed(),"Logout button not displayed");
         logoutBtn.click();
