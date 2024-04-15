@@ -46,7 +46,6 @@ public class HomePage {
 
     }
     public void setStoreLink() throws InterruptedException {
-        driver.wait(100);
         storeLink.click();
         Assert.assertEquals(driver.getTitle(),"Products – AskOmDch","Title not correct ,not found or not correct page");
     }
