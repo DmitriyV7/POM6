@@ -18,9 +18,9 @@ public class Driver {
         if (driver == null){
             switch (browser){
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    ChromeOptions options = getChromeOptions();
-                    driver = new ChromeDriver(options);
+//                    WebDriverManager.chromedriver().setup();
+//                    ChromeOptions options = getChromeOptions();
+                    driver = new ChromeDriver();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();

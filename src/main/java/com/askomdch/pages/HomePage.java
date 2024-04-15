@@ -34,7 +34,7 @@ public class HomePage {
 
 
 
-    public void setAccountLink() throws InterruptedException {
+    public void setAccountLink() {
         accountLink.click();
 
     }
@@ -43,7 +43,7 @@ public class HomePage {
         Assert.assertEquals(driver.getTitle(),"About – AskOmDch","Title not correct ,not found or not correct page");
 
     }
-    public void setStoreLink() throws InterruptedException {
+    public void setStoreLink() {
         storeLink.click();
         Assert.assertEquals(driver.getTitle(),"Products – AskOmDch","Title not correct ,not found or not correct page");
     }
