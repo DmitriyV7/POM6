@@ -48,7 +48,7 @@ public class LoginTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"User can't logged in with not correct password and username");
 
     }
-//    @Test(dataProvider = "login")
+    @Test(dataProvider = "login")
     public void RegisterUserPositive(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Registration new user Positive test");
         HomePage homePage = new HomePage(driver);
@@ -59,7 +59,7 @@ public class LoginTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"User made registration on the Account page successfully");
 
     }
-//    @Test(dataProvider = "login")
+    @Test(dataProvider = "login")
     public void RegisterUserNegative(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Registration new user Negative test");
         HomePage homePage = new HomePage(driver);
