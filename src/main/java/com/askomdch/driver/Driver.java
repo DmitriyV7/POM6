@@ -21,7 +21,7 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
-//                    options.addArguments("--headless"); // Run in headless mode
+                    options.addArguments("--headless"); // Run in headless mode
                     options.addArguments("--no-sandbox"); // Bypass OS security model
                     options.addArguments("--disable-gpu"); // Applicable to windows os only
                     options.addArguments("--start-maximized"); // Maximize the browser on start
@@ -31,7 +31,6 @@ public class Driver {
                     driver = new ChromeDriver(options);
                     break;
                 case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 case "edge":
@@ -41,7 +40,7 @@ public class Driver {
                     throw new RuntimeException("Invalid Browser type: " + browser);
             }
             driver.manage().window().maximize();
-//            driver.manage().deleteAllCookies();
+            driver.manage().deleteAllCookies();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
             }catch (Exception e){
