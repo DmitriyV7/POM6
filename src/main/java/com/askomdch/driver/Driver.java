@@ -26,7 +26,7 @@ public class Driver {
                     options.addArguments("--disable-gpu"); // Applicable to windows os only
                     options.addArguments("--start-maximized"); // Maximize the browser on start
                     options.addArguments("--enable-automation");
-                    options.addArguments("--disable-info bars");
+                    options.addArguments("--disable-infobars");
                     options.addArguments("--disable-dev-shm-usage");
                     driver = new ChromeDriver(options);
                     break;
