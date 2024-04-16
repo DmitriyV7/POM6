@@ -25,6 +25,7 @@ public class PlaceOrderTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"User added order to the cart successfully");
         cartPage.cartPageVerification(data);
         extentTest.log(LogStatus.PASS,"User completed order details at checkout as a Guest successfully");
+        Thread.sleep(1000);
         cartPage.asGuest(data);
         extentTest.log(LogStatus.PASS,"User placed an order in store as a Guest successfully");
         extentTest.log(LogStatus.PASS,"Guest User successfully landed on the Home page after checkout");
@@ -47,6 +48,7 @@ public class PlaceOrderTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"User added order to the cart successfully");
         cartPage.cartPageVerification(data);
         extentTest.log(LogStatus.PASS,"User completed order details at checkout as a Registered User successfully");
+        Thread.sleep(1000);
         cartPage.asGuest(data);
         extentTest.log(LogStatus.PASS,"User placed an order in store as a Registered user successfully");
         extentTest.log(LogStatus.PASS,"Guest User successfully landed on the Home page after checkout");
