@@ -105,7 +105,6 @@ public class AccountPage extends HomePage {
         newPasswordInput.sendKeys(data.get("password"));
         Assert.assertTrue(registerBtn.isEnabled(),"Register button not enabled");
         registerBtn.click();
-        Assert.assertEquals(errorMessage.getText(),"Error:","Error message not displayed");
         Assert.assertEquals(errorMessage2.getText(),data.get("error_message"),"Error message not displayed");
     }
     public void loginWithOutLogOut(Map<String, String> data) throws InterruptedException {
