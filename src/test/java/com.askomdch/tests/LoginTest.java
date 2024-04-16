@@ -59,7 +59,7 @@ public class LoginTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"User made registration on the Account page successfully");
 
     }
-//    @Test(dataProvider = "login")
+    @Test(dataProvider = "login")
     public void RegisterUserNegative(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Registration new user Negative test");
         HomePage homePage = new HomePage(driver);

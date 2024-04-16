@@ -31,7 +31,7 @@ public class PlaceOrderTest extends BaseTest {
         Thread.sleep(3000);
 
     }
-//    @Test(dataProvider = "order")
+    @Test(dataProvider = "order")
     public void PlaceOrderAsRegisteredUser(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order test");
         HomePage homePage = new HomePage(driver);
@@ -54,7 +54,7 @@ public class PlaceOrderTest extends BaseTest {
         homePage.setAccountLink();
 
     }
-//    @Test(dataProvider = "order")
+    @Test(dataProvider = "order")
     public void PlaceOrderAnCreateAccount(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order test");
         HomePage homePage = new HomePage(driver);
