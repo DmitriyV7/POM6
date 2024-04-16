@@ -84,6 +84,7 @@ public class AccountPage extends HomePage {
     public void registerUserPositive(Map<String, String> data) throws InterruptedException {
         Assert.assertEquals(driver.getTitle(),"Account – AskOmDch", "Not an Account Page");
         Assert.assertEquals(accountHeading.getText(),"Account","Account heading not expected");
+        Thread.sleep(2000);
         newRegisterUserNameInput.clear();
         newRegisterUserNameInput.sendKeys(data.get("new_user_name"));
         newRegisterEmailInput.clear();
