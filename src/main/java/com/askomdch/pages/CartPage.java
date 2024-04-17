@@ -90,7 +90,7 @@ public class CartPage extends HomePage {
         quantityInput.sendKeys(data.get("quantity"));
         Assert.assertTrue(applyCouponBtn.isDisplayed(),"Apply coupon Button not displayed");
         updateCartBtn.click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         Assert.assertTrue(proceedToCheckoutBtn.isDisplayed(),"Proceed to Checkout  Button not displayed");
         proceedToCheckoutBtn.click();
         billingFirstNameInput.clear();
@@ -124,13 +124,13 @@ public class CartPage extends HomePage {
     public void asGuest(Map<String, String> data) throws InterruptedException {
         cashMethodRadioBtn.click();
         placeOrderBtn.click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
     }
     public void asRegisteredUser(Map<String, String> data) throws InterruptedException {
         placeOrderBtn.click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
         accountLink.click();
@@ -146,7 +146,7 @@ public class CartPage extends HomePage {
         accountPasswordInput.sendKeys(data.get("new_password"));
         cashMethodRadioBtn.click();
         placeOrderBtn.click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
         accountLink.click();
@@ -174,6 +174,9 @@ public class CartPage extends HomePage {
         placeOrderBtn.click();
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
+        accountLink.click();
+        AccountPage accountPage = new AccountPage(driver);
+        accountPage.logoutBtn.click();
 
     }
 }

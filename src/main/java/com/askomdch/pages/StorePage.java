@@ -33,9 +33,9 @@ public class StorePage extends HomePage {
             Assert.assertEquals(driver.getTitle(),"Products – AskOmDch", "Not an Products Page");
             searchFieldInput.sendKeys(data.get("product_name"));
             searchBtn.click();
-            moveSlider(driver,-110);
-            filterBtn.click();
-            WebElement productName = driver.findElement(By.xpath("//*[@class= 'products columns-4']//h2[contains(text(),'"+data.get("product_name1")+"')]"));
+//            moveSlider(driver,-110);
+//            filterBtn.click();
+            WebElement productName = driver.findElement(By.xpath("//h2[contains(text(),'"+data.get("product_name1")+"')]"));
             productName.click();
             addToCart.click();
             Assert.assertTrue(verifyCartMessage.isDisplayed(),"Product not added to cart");
