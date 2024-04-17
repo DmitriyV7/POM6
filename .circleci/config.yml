@@ -7,7 +7,6 @@ jobs:
 
     steps:
       - checkout
-
       # Install latest versions of browsers and their corresponding drivers
       - run:
           name: Install Browsers and WebDriverManager
