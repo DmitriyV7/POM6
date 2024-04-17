@@ -137,6 +137,7 @@ public class CartPage extends HomePage {
         homePageLink.click();
         accountLink.click();
         AccountPage accountPage = new AccountPage(driver);
+        Thread.sleep(2000);
         accountPage.logoutBtn.click();
 
     }
