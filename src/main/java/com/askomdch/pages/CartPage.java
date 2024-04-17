@@ -121,6 +121,7 @@ public class CartPage extends HomePage {
         billingEmailInput.sendKeys(data.get("email"));
         Thread.sleep(1000);
     }
+
     public void asGuest(Map<String, String> data) throws InterruptedException {
         cashMethodRadioBtn.click();
         placeOrderBtn.click();
@@ -128,6 +129,7 @@ public class CartPage extends HomePage {
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
     }
+
     public void asRegisteredUser(Map<String, String> data) throws InterruptedException {
         placeOrderBtn.click();
         Thread.sleep(3000);
@@ -138,6 +140,7 @@ public class CartPage extends HomePage {
         accountPage.logoutBtn.click();
 
     }
+
     public void createAccount(Map<String, String> data) throws InterruptedException {
         billingEmailInput.clear();
         billingEmailInput.sendKeys(data.get("new_email"));
@@ -153,6 +156,7 @@ public class CartPage extends HomePage {
         AccountPage accountPage = new AccountPage(driver);
         accountPage.logoutBtn.click();
     }
+
     public void shipDifferentAddress(Map<String, String> data) throws InterruptedException {
         shipDifferentAddressCheckbox.click();
         shippingFirstNameInput.sendKeys(data.get("shipping_first_name"));
@@ -177,6 +181,5 @@ public class CartPage extends HomePage {
         accountLink.click();
         AccountPage accountPage = new AccountPage(driver);
         accountPage.logoutBtn.click();
-
     }
 }

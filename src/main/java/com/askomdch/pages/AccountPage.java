@@ -52,9 +52,11 @@ public class AccountPage extends HomePage {
         Assert.assertTrue(rememberMeCheckBox.isDisplayed(),"CheckBox not displayed");
         Assert.assertTrue(lostPasswordLink.isDisplayed(),"Lost password link not displayed");
         loginButton.click();
+        Thread.sleep(2000);
         Assert.assertEquals(loginMessage.getText(),data.get("user_name"),"Is not correct Login message");
         logoutBtn.click();
     }
+
     public void loginRemember(Map<String, String> data) throws InterruptedException {
         Assert.assertEquals(driver.getTitle(),"Account – AskOmDch", "Not an Account Page");
         Assert.assertEquals(accountHeading.getText(),"Account","Account heading not expected");
@@ -65,9 +67,11 @@ public class AccountPage extends HomePage {
         rememberMeCheckBox.click();
         Assert.assertTrue(lostPasswordLink.isDisplayed(),"Lost password link not displayed");
         loginButton.click();
+        Thread.sleep(2000);
         Assert.assertEquals(loginMessage.getText(),data.get("user_name"),"Is not correct Login message");
         logoutBtn.click();
     }
+
     public void loginNegative(Map<String, String> data) throws InterruptedException {
         Assert.assertEquals(driver.getTitle(),"Account – AskOmDch", "Not an Account Page");
         Assert.assertEquals(accountHeading.getText(),"Account","Account heading not expected");
@@ -78,9 +82,10 @@ public class AccountPage extends HomePage {
         rememberMeCheckBox.click();
         Assert.assertTrue(lostPasswordLink.isDisplayed(),"Lost password link not displayed");
         loginButton.click();
+        Thread.sleep(2000);
         Assert.assertTrue(errorMessage.isDisplayed(),"Error message not displayed");
-
     }
+
     public void registerUserPositive(Map<String, String> data) throws InterruptedException {
         Assert.assertEquals(driver.getTitle(),"Account – AskOmDch", "Not an Account Page");
         Assert.assertEquals(accountHeading.getText(),"Account","Account heading not expected");
@@ -93,11 +98,12 @@ public class AccountPage extends HomePage {
         newPasswordInput.sendKeys(data.get("new_password"));
         Assert.assertTrue(registerBtn.isEnabled(),"Register button not enabled");
         registerBtn.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Assert.assertEquals(loginMessage.getText(),data.get("new_user_name"),"Is not correct Login message");
         Assert.assertTrue(logoutBtn.isDisplayed(),"Logout button not displayed");
         logoutBtn.click();
     }
+
     public void registerUserNegative(Map<String, String> data) throws InterruptedException {
         Assert.assertEquals(driver.getTitle(),"Account – AskOmDch", "Not an Account Page");
         Assert.assertEquals(accountHeading.getText(),"Account","Account heading not expected");
@@ -106,8 +112,10 @@ public class AccountPage extends HomePage {
         newPasswordInput.sendKeys(data.get("password"));
         Assert.assertTrue(registerBtn.isEnabled(),"Register button not enabled");
         registerBtn.click();
+        Thread.sleep(2000);
         Assert.assertEquals(errorMessage2.getText(),data.get("error_message"),"Error message not displayed");
     }
+
     public void loginWithOutLogOut(Map<String, String> data) throws InterruptedException {
         Assert.assertEquals(driver.getTitle(),"Account – AskOmDch", "Not an Account Page");
         Assert.assertEquals(accountHeading.getText(),"Account","Account heading not expected");

@@ -40,13 +40,11 @@ public class StorePage extends HomePage {
             addToCart.click();
             Assert.assertTrue(verifyCartMessage.isDisplayed(),"Product not added to cart");
             cartBtn.click();
-
     }
+
     public static void moveSlider(WebDriver driver, int xOffset) {
         WebElement slider = driver.findElement(By.xpath("(//*[@class = 'price_slider_wrapper']//span)[2][@style='left: 100%;']"));
         Actions actions = new Actions(driver);
         actions.dragAndDropBy(slider, xOffset, 0).build().perform();
     }
-
-
 }
