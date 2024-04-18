@@ -19,7 +19,8 @@ public class Driver {
             try{
             switch (browser){
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().clearDriverCache().setup();
+                    WebDriverManager.chromedriver().clearResolutionCache().setup();
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless"); // Run in headless mode
                     options.addArguments("--no-sandbox"); // Bypass OS security model
