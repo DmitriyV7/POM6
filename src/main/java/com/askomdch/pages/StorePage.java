@@ -33,7 +33,7 @@ public class StorePage extends HomePage {
             Assert.assertEquals(driver.getTitle(),"Products – AskOmDch", "Not an Products Page");
             searchFieldInput.sendKeys(data.get("product_name"));
             searchBtn.click();
-            Thread.sleep(2000);
+//            Thread.sleep(2000);
 //            moveSlider(driver,-110);
 //            filterBtn.click();
             WebElement productName = driver.findElement(By.xpath("//*[@class='woocommerce-loop-product__title'][contains(text(),'"+data.get("product_name1")+"')]"));
