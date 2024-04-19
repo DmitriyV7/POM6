@@ -90,7 +90,6 @@ public class CartPage extends HomePage {
         quantityInput.sendKeys(data.get("quantity"));
         Assert.assertTrue(applyCouponBtn.isDisplayed(),"Apply coupon Button not displayed");
         updateCartBtn.click();
-        Thread.sleep(3000);
         if(!proceedToCheckoutBtn.isEnabled()){
             Thread.sleep(2000);
         }else {
@@ -138,6 +137,7 @@ public class CartPage extends HomePage {
     }
 
     public void asRegisteredUser(Map<String, String> data) throws InterruptedException {
+        bankTransferMethodRadioBtn.click();
         if(!placeOrderBtn.isEnabled()){
             Thread.sleep(2000);
         }else {
