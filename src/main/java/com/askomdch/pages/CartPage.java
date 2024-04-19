@@ -90,7 +90,7 @@ public class CartPage extends HomePage {
         quantityInput.sendKeys(data.get("quantity"));
         Assert.assertTrue(applyCouponBtn.isDisplayed(),"Apply coupon Button not displayed");
         updateCartBtn.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         proceedToCheckoutBtn.click();
         Thread.sleep(2000);
         billingFirstNameInput.clear();
