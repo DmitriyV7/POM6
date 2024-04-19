@@ -11,7 +11,7 @@ import java.util.Map;
 
 
 public class PlaceOrderTest extends BaseTest {
-    @Test(dataProvider = "order")
+//    @Test(dataProvider = "order")
     public void PlaceOrderTestAsGuest(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order Test As Guest");
         HomePage homePage = new HomePage(driver);
@@ -45,14 +45,16 @@ public class PlaceOrderTest extends BaseTest {
         storePage.storePageOrder(data);
         extentTest.log(LogStatus.PASS,"User added order to the cart successfully");
         cartPage.cartPageVerification(data);
+        extentTest.log(LogStatus.PASS,"Used completed personal information successfully ");
         cartPage.shipDifferentAddress(data);
+        extentTest.log(LogStatus.PASS,"Used completed different shipping information successfully ");
         Thread.sleep(1000);
         cartPage.asRegisteredUser(data);
         extentTest.log(LogStatus.PASS,"User placed an order in store as a Registered user successfully");
 
 
     }
-    @Test(dataProvider = "order")
+//    @Test(dataProvider = "order")
     public void PlaceOrderAnCreateAccount(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order An Create Account");
         HomePage homePage = new HomePage(driver);

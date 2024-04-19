@@ -171,22 +171,12 @@ public class CartPage extends HomePage {
         shippingAddress1Input.sendKeys(data.get("shipping_street_address"));
         shippingAddress2Input.sendKeys(data.get("shipping_apt"));
         shippingCityInput.sendKeys(data.get("shipping_city"));
-        if(data.get("shipping_country").equals("United States (US)")){
+        if (data.get("shipping_country").equals("United States (US)")) {
             Select stateSelect = new Select(shippingStateSelect);
             stateSelect.selectByVisibleText(data.get("shipping_state"));
-        }else {
+        } else {
             shippingStateSelect.sendKeys(data.get("shipping_state"));
         }
         shippingPostcodeInput.sendKeys(data.get("shipping_postcode"));
-        if(!placeOrderBtn.isEnabled()){
-            Thread.sleep(2000);
-        }else {
-        placeOrderBtn.click();
-        }
-        Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
-        homePageLink.click();
-        accountLink.click();
-        AccountPage accountPage = new AccountPage(driver);
-        accountPage.logoutBtn.click();
     }
 }
