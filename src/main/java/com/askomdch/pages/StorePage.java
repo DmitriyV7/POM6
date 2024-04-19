@@ -35,7 +35,7 @@ public class StorePage extends HomePage {
             searchBtn.click();
 //            moveSlider(driver,-110);
 //            filterBtn.click();
-            WebElement productName = driver.findElement(By.xpath("//h2[contains(text(),'"+data.get("product_name1")+"')]"));
+            WebElement productName = driver.findElement(By.xpath("//*[@class='woocommerce-loop-product__title'][contains(text(),'"+data.get("product_name1")+"')]"));
             productName.click();
             addToCart.click();
             Assert.assertTrue(verifyCartMessage.isDisplayed(),"Product not added to cart");
