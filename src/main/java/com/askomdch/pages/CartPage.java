@@ -131,7 +131,7 @@ public class CartPage extends HomePage {
     }
 
     public void asRegisteredUser(Map<String, String> data) throws InterruptedException {
-        bankTransferMethodRadioBtn.click();
+        cashMethodRadioBtn.click();
         Thread.sleep(2000);
         placeOrderBtn.click();
         Thread.sleep(3000);

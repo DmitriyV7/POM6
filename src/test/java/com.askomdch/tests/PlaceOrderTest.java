@@ -28,8 +28,8 @@ public class PlaceOrderTest extends BaseTest {
         cartPage.asGuest(data);
         extentTest.log(LogStatus.PASS,"User placed an order in store as a Guest successfully");
         extentTest.log(LogStatus.PASS,"Guest User successfully landed on the Home page after checkout");
-
     }
+
     @Test(dataProvider = "order")
     public void PlaceOrderAsRegisteredUser(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order As Registered User");
@@ -51,9 +51,8 @@ public class PlaceOrderTest extends BaseTest {
         Thread.sleep(1000);
         cartPage.asRegisteredUser(data);
         extentTest.log(LogStatus.PASS,"User placed an order in store as a Registered user successfully");
-
-
     }
+
     @Test(dataProvider = "order")
     public void PlaceOrderAnCreateAccount(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order An Create Account");
@@ -71,12 +70,11 @@ public class PlaceOrderTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"User placed an order in store as a Registered user successfully");
         extentTest.log(LogStatus.PASS,"Guest User successfully landed on the Home page after checkout");
         Thread.sleep(3000);
-
     }
+
     @DataProvider(name = "order")
     public Object[][] getData() {
         ExcelReader reader = new ExcelReader("src/main/resources/test_data/Test_Data.xlsx", "order");
         return reader.getData();
-
     }
 }
