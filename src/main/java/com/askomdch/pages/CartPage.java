@@ -132,6 +132,7 @@ public class CartPage extends HomePage {
 
     public void asRegisteredUser(Map<String, String> data) throws InterruptedException {
         bankTransferMethodRadioBtn.click();
+        Thread.sleep(2000);
         placeOrderBtn.click();
         Thread.sleep(3000);
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
