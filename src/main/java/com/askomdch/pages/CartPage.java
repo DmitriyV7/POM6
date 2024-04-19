@@ -136,14 +136,6 @@ public class CartPage extends HomePage {
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
         accountLink.click();
-        AccountPage accountPage = new AccountPage(driver);
-        Thread.sleep(2000);
-        if (!accountPage.logoutBtn.isDisplayed()){
-            Thread.sleep(2000);
-        }else{
-        accountPage.logoutBtn.click();
-        }
-
     }
 
     public void createAccount(Map<String, String> data) throws InterruptedException {
