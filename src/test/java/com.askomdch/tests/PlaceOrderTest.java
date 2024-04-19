@@ -50,8 +50,7 @@ public class PlaceOrderTest extends BaseTest {
         Thread.sleep(1000);
         cartPage.asRegisteredUser(data);
         extentTest.log(LogStatus.PASS,"User placed an order in store as a Registered user successfully");
-        extentTest.log(LogStatus.PASS,"Guest User successfully landed on the Home page after checkout");
-        Thread.sleep(3000);
+
 
     }
     @Test(dataProvider = "order")

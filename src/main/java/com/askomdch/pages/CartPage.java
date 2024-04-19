@@ -135,7 +135,6 @@ public class CartPage extends HomePage {
         Thread.sleep(3000);
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
-        accountLink.click();
     }
 
     public void createAccount(Map<String, String> data) throws InterruptedException {
