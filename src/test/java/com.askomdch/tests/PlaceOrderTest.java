@@ -11,7 +11,7 @@ import java.util.Map;
 
 
 public class PlaceOrderTest extends BaseTest {
-//    @Test(dataProvider = "order")
+    @Test(dataProvider = "order")
     public void PlaceOrderTestAsGuest(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order Test As Guest");
         HomePage homePage = new HomePage(driver);
@@ -54,7 +54,7 @@ public class PlaceOrderTest extends BaseTest {
 
 
     }
-//    @Test(dataProvider = "order")
+    @Test(dataProvider = "order")
     public void PlaceOrderAnCreateAccount(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order An Create Account");
         HomePage homePage = new HomePage(driver);
