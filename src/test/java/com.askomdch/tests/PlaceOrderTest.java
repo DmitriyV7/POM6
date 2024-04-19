@@ -45,7 +45,6 @@ public class PlaceOrderTest extends BaseTest {
         storePage.storePageOrder(data);
         extentTest.log(LogStatus.PASS,"User added order to the cart successfully");
         cartPage.cartPageVerification(data);
-        extentTest.log(LogStatus.PASS,"User completed order details at checkout as a Registered User successfully");
         cartPage.shipDifferentAddress(data);
         Thread.sleep(1000);
         cartPage.asRegisteredUser(data);
