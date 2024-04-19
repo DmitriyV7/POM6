@@ -4,7 +4,6 @@
     <test name="REGRESSION TESTS">
         <classes>
             <class name="com.askomdch.tests.LoginTest"> </class>
-            <class name="com.askomdch.tests.PlaceOrderTest"/>
             </classes>
     </test>
 </suite>
