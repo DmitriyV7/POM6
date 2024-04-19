@@ -91,8 +91,12 @@ public class CartPage extends HomePage {
         Assert.assertTrue(applyCouponBtn.isDisplayed(),"Apply coupon Button not displayed");
         updateCartBtn.click();
         Thread.sleep(2000);
+        if(!proceedToCheckoutBtn.isEnabled()){
+            Thread.sleep(2000);
+        }else {
         Assert.assertTrue(proceedToCheckoutBtn.isDisplayed(),"Proceed to Checkout  Button not displayed");
         proceedToCheckoutBtn.click();
+        }
         billingFirstNameInput.clear();
         billingFirstNameInput.sendKeys(data.get("first_name"));
         billingLastNameInput.clear();
@@ -174,8 +178,11 @@ public class CartPage extends HomePage {
             shippingStateSelect.sendKeys(data.get("shipping_state"));
         }
         shippingPostcodeInput.sendKeys(data.get("shipping_postcode"));
-        Thread.sleep(1000);
+        if(!placeOrderBtn.isEnabled()){
+            Thread.sleep(2000);
+        }else {
         placeOrderBtn.click();
+        }
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
         accountLink.click();
