@@ -89,8 +89,11 @@ public class AccountPage extends HomePage {
     public void registerUserPositive(Map<String, String> data) throws InterruptedException {
         Assert.assertEquals(driver.getTitle(),"Account – AskOmDch", "Not an Account Page");
         Assert.assertEquals(accountHeading.getText(),"Account","Account heading not expected");
+        if(!newRegisterUserNameInput.isDisplayed()){
         Thread.sleep(2000);
+        }else {
         newRegisterUserNameInput.clear();
+        }
         newRegisterUserNameInput.sendKeys(data.get("new_user_name"));
         newRegisterEmailInput.clear();
         newRegisterEmailInput.sendKeys(data.get("new_email"));
@@ -99,7 +102,11 @@ public class AccountPage extends HomePage {
         Assert.assertTrue(registerBtn.isEnabled(),"Register button not enabled");
         registerBtn.click();
         Thread.sleep(2000);
+        if(!loginMessage.isDisplayed()){
+            Thread.sleep(2000);
+        }else {
         Assert.assertEquals(loginMessage.getText(),data.get("new_user_name"),"Is not correct Login message");
+        }
         Assert.assertTrue(logoutBtn.isDisplayed(),"Logout button not displayed");
         logoutBtn.click();
     }

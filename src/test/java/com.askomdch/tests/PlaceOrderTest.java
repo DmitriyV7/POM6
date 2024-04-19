@@ -13,7 +13,7 @@ import java.util.Map;
 public class PlaceOrderTest extends BaseTest {
     @Test(dataProvider = "order")
     public void PlaceOrderTestAsGuest(Map<String, String> data) throws InterruptedException {
-        extentTest = reports.startTest("PlaceOrderTestAsGuest");
+        extentTest = reports.startTest("Place Order Test As Guest");
         HomePage homePage = new HomePage(driver);
         StorePage storePage = new StorePage(driver);
         CartPage cartPage = new CartPage(driver);
@@ -32,7 +32,7 @@ public class PlaceOrderTest extends BaseTest {
     }
     @Test(dataProvider = "order")
     public void PlaceOrderAsRegisteredUser(Map<String, String> data) throws InterruptedException {
-        extentTest = reports.startTest("PlaceOrderAsRegisteredUser");
+        extentTest = reports.startTest("Place Order As Registered User");
         HomePage homePage = new HomePage(driver);
         StorePage storePage = new StorePage(driver);
         CartPage cartPage = new CartPage(driver);
@@ -56,7 +56,7 @@ public class PlaceOrderTest extends BaseTest {
     }
     @Test(dataProvider = "order")
     public void PlaceOrderAnCreateAccount(Map<String, String> data) throws InterruptedException {
-        extentTest = reports.startTest("PlaceOrderAnCreateAccount");
+        extentTest = reports.startTest("Place Order An Create Account");
         HomePage homePage = new HomePage(driver);
         StorePage storePage = new StorePage(driver);
         CartPage cartPage = new CartPage(driver);

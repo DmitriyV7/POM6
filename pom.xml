@@ -46,6 +46,11 @@
             <version>${java.faker.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-devtools-v123</artifactId> <!-- Replace v124 with the appropriate version -->
+            <version>4.19.1</version> <!-- Replace with the version matching your Selenium version -->
+        </dependency>
+        <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>${apache.poi.version}</version>
