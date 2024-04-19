@@ -90,14 +90,17 @@ public class CartPage extends HomePage {
         quantityInput.sendKeys(data.get("quantity"));
         Assert.assertTrue(applyCouponBtn.isDisplayed(),"Apply coupon Button not displayed");
         updateCartBtn.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         if(!proceedToCheckoutBtn.isEnabled()){
             Thread.sleep(2000);
         }else {
         Assert.assertTrue(proceedToCheckoutBtn.isDisplayed(),"Proceed to Checkout  Button not displayed");
         proceedToCheckoutBtn.click();
-        }
+        }if(!billingFirstNameInput.isDisplayed()){
+            Thread.sleep(2000);
+        }else {
         billingFirstNameInput.clear();
+        }
         billingFirstNameInput.sendKeys(data.get("first_name"));
         billingLastNameInput.clear();
         billingLastNameInput.sendKeys(data.get("last_name"));
@@ -135,7 +138,11 @@ public class CartPage extends HomePage {
     }
 
     public void asRegisteredUser(Map<String, String> data) throws InterruptedException {
+        if(!placeOrderBtn.isEnabled()){
+            Thread.sleep(2000);
+        }else {
         placeOrderBtn.click();
+        }
         Thread.sleep(3000);
         Assert.assertEquals(orderConfirmationMessage.getText(),data.get("order_confirmation"),"Check your order again,not conformed");
         homePageLink.click();
