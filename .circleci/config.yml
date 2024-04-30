@@ -37,19 +37,12 @@ jobs:
 
       - store_test_results:
           path: /home/circleci/project/target/surefire-reports
-            #          /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
+
       - store_artifacts:
           path: target/surefire-reports
           destination: test-report
 
-#      - store_test_results:
-#          path: target/surefire-reports/junitreports
-#
-#      - store_artifacts:
-#          path: test-report
-#          destination: test-report
-#
-#workflows:
-#  sample:
-#    jobs:
-#      - build-and-test
+workflows:
+  sample:
+    jobs:
+      - build-and-test
