@@ -12,52 +12,46 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.faker.version>1.0.2</java.faker.version>
-        <selenium.java.version>4.12.1</selenium.java.version>
-        <testng.version>7.7.1</testng.version>
-        <extentreports.version>5.0.9</extentreports.version>
-        <extent.reports.version>2.41.2</extent.reports.version>
-        <apache.poi.version>4.1.0</apache.poi.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.19.1</version>
+            <version>4.20.0</version>
         </dependency>
         <dependency>
             <groupId>com.relevantcodes</groupId>
             <artifactId>extentreports</artifactId>
-            <version>${extent.reports.version}</version>
+            <version>2.41.2</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>${testng.version}</version>
+            <version>7.7.1</version>
             <scope>compile</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
-            <version>${java.faker.version}</version>
+            <version>1.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v123</artifactId> <!-- Replace v124 with the appropriate version -->
-            <version>4.19.1</version> <!-- Replace with the version matching your Selenium version -->
+            <artifactId>selenium-devtools-v124</artifactId> <!-- Replace v125 with the appropriate version -->
+            <version>4.20.0</version> <!-- Replace with the version matching your Selenium version -->
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>${apache.poi.version}</version>
+            <version>4.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>${apache.poi.version}</version>
+            <version>4.1.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
