@@ -14,8 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.faker.version>1.0.2</java.faker.version>
         <selenium.java.version>4.12.1</selenium.java.version>
-        <testng.version>7.7.1</testng.version>
-        <extentreports.version>5.0.9</extentreports.version>
+        <testng.version>7.10.2</testng.version>
+        <extentreports.version>5.1.1</extentreports.version>
         <extent.reports.version>2.41.2</extent.reports.version>
         <apache.poi.version>4.1.0</apache.poi.version>
     </properties>
@@ -24,7 +24,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.19.1</version>
+            <version>4.20.0</version>
         </dependency>
         <dependency>
             <groupId>com.relevantcodes</groupId>
@@ -46,8 +46,8 @@
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v123</artifactId> <!-- Replace v124 with the appropriate version -->
-            <version>4.19.1</version> <!-- Replace with the version matching your Selenium version -->
+            <artifactId>selenium-devtools-v124</artifactId> <!-- Replace v125 with the appropriate version -->
+            <version>4.20.0</version> <!-- Replace with the version matching your Selenium version -->
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
