@@ -13,11 +13,16 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.faker.version>1.0.2</java.faker.version>
-        <selenium.java.version>4.12.1</selenium.java.version>
+<!--        https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java-->
+        <selenium.java.version>4.20.0</selenium.java.version>
+<!--        https://mvnrepository.com/artifact/org.testng/testng-->
         <testng.version>7.10.2</testng.version>
+<!--        https://mvnrepository.com/artifact/com.aventstack/extentreports-->
         <extentreports.version>5.1.1</extentreports.version>
+<!--        https://mvnrepository.com/artifact/com.relevantcodes/extentreports-->
         <extent.reports.version>2.41.2</extent.reports.version>
-        <apache.poi.version>4.1.0</apache.poi.version>
+<!--        https://mvnrepository.com/artifact/org.apache.poi/poi-->
+        <apache.poi.version>5.2.5</apache.poi.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -44,21 +49,34 @@
             <artifactId>javafaker</artifactId>
             <version>${java.faker.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v124</artifactId> <!-- Replace v125 with the appropriate version -->
-            <version>4.20.0</version> <!-- Replace with the version matching your Selenium version -->
+            <artifactId>selenium-server</artifactId>
+            <version>3.141.59</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.20.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>${apache.poi.version}</version>
+            <version>5.2.5</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>${apache.poi.version}</version>
+            <version>5.2.5</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -69,9 +87,10 @@
     <build>
         <plugins>
             <plugin>
+<!--            https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire- -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.2.5</version>
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>test_runner/smoke.xml</suiteXmlFile>

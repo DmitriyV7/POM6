@@ -31,15 +31,16 @@ jobs:
       - run:
           name: Test
           command: mvn test
+
       - run:
           name: Create test results directory
           command: mkdir -p /home/circleci/project/target/surefire-reports/store_test_results
 
       - store_test_results:
-          path: /home/circleci/project/target/surefire-reports
+          path: /home/circleci/project/target/surefire-reports/store_test_results
 
       - store_artifacts:
-          path: target/surefire-reports
+          path: /home/circleci/project/target/surefire-reports
           destination: test-report
 
 workflows:
