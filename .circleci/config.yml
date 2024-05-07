@@ -33,16 +33,15 @@ jobs:
           command: mvn test
 
       - run:
-          name: Move Test Results
-          command: mvn surefire-report:report
-
+          name: Create test results directory
+          command: mkdir -p /home/circleci/project/target/surefire-reports/store_test_results
 
       - store_test_results:
-          path: test-report/ExtentReport.html
-
+                path: /home/circleci/project/target/surefire-reports
+            #          /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
       - store_artifacts:
-          path: test-report
-          destination: test-report
+                path: target/surefire-reports
+                destination: test-report
 
 workflows:
   sample:
