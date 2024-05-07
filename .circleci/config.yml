@@ -38,7 +38,7 @@ jobs:
 
 
       - store_test_results:
-          path: test-report/surefire-report.html
+          path: test-report
 
       - store_artifacts:
           path: test-report
