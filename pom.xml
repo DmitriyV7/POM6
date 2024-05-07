@@ -100,6 +100,7 @@
                             <name>listener</name>
                             <value>org.testng.reporters.JUnitXMLReporter</value>
                             <reportFormat>html</reportFormat>
+                            <reportsDirectory>target/surefire-reports</reportsDirectory>
                         </property>
                     </properties>
                 </configuration>
