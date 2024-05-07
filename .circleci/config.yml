@@ -34,13 +34,13 @@ jobs:
 
       - run:
           name: Create test results directory
-          command: mkdir -p /home/circleci/project/target/surefire-reports
+          command: mkdir -p test-results
 
       - store_test_results:
-          path: /home/circleci/project/target/surefire-reports
+          path: test-results
 
       - store_artifacts:
-          path: /home/circleci/project/target/surefire-reports
+          path: test-results
           destination: test-report
 
 workflows:
