@@ -35,7 +35,10 @@ jobs:
       - run:
           name: Move Test Results
           command: mvn surefire-report:report
-          path: /target/site/test-report/surefire-report.html
+
+
+      - store_test_results:
+          path: test-report/surefire-report.html
 
       - store_artifacts:
           path: test-report
