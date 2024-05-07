@@ -20,7 +20,7 @@ import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-    @Listeners({org.testng.reporters.JUnitXMLReporter.class})
+
 public abstract class BaseTest {
 
     protected static WebDriver driver;
