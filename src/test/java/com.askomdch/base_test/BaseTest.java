@@ -10,10 +10,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
+
 import java.io.File;
 
 import java.io.IOException;
@@ -22,6 +20,7 @@ import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+    @Listeners({org.testng.reporters.JUnitXMLReporter.class})
 public abstract class BaseTest {
 
     protected static WebDriver driver;
