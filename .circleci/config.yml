@@ -38,7 +38,7 @@ jobs:
 
 
       - store_test_results:
-          path: test-report
+          path: test-report/ExtentReport.html
 
       - store_artifacts:
           path: test-report
