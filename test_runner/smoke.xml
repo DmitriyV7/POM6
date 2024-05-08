@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results>
-    <suite name="SMOKE TEST SUITE" thread-count="1" parallel="methods">
-        <test name="SMOKE TESTS">
-            <classes>
-                <class name="com.askomdch.tests.PlaceOrderTest"/>
-                <!-- <class name="com.askomdch.tests.LoginTest"/> -->
-            </classes>
-        </test>
-    </suite>
-</testng-results>
+<suite name="SMOKE TEST SUITE" thread-count="1" parallel="methods">
+    <test name="SMOKE TESTS">
+        <classes>
+            <class name="com.askomdch.tests.PlaceOrderTest"/>
+            <!-- <class name="com.askomdch.tests.LoginTest"/> -->
+        </classes>
+    </test>
+</suite>
+
