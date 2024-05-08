@@ -79,7 +79,7 @@ public class LoginTest extends BaseTest {
         aboutPage.teamNameVerification(data);
     }
 
-//    @DataProvider(name = "login")
+    @DataProvider(name = "login")
     public Object[][] getData() {
         ExcelReader reader = new ExcelReader("src/main/resources/test_data/Test_Data.xlsx", "login");
         return reader.getData();
