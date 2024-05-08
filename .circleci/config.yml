@@ -26,8 +26,8 @@ jobs:
             sudo mv geckodriver /usr/local/bin/
 
       - run:
-        name: Clean and Build
-        command: mvn clean install -DskipTests
+          name: Clean and Build
+          command: mvn clean install -DskipTests
 
       - run:
           name: Test
@@ -57,24 +57,3 @@ jobs:
               sed -i '/<suite/d' "$file"
               sed -i '/<\/suite>/d' "$file"
             done
-
-
-#      - run:
-#          name: Clean and Build
-#          command: mvn clean install -DskipTests
-#
-#      - run:
-#          name: Test
-#          command: mvn test
-#
-#      - store_test_results:
-#          path: target/surefire-reports
-#
-#      - store_artifacts:
-#          path: test-report
-#          destination: test-report
-
-workflows:
-  sample:
-    jobs:
-      - build-and-test
