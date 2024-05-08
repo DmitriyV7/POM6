@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <suite name="SMOKE TEST SUITE" thread-count="1" parallel="methods">
     <test name="SMOKE TESTS">
         <classes>
 <!--            <class name="com.askomdch.tests.PlaceOrderTest"/>-->
              <class name="com.askomdch.tests.LoginTest"/>
+            <testsuite name="TestSuite">
+                <testng-results>
+
+                </testng-results>
+
+            </testsuite>
         </classes>
     </test>
 </suite>
