@@ -96,10 +96,8 @@
                         <suiteXmlFile>test_runner/smoke.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
-                        <property>
                             <name>listener</name>
                             <value>org.testng.reporters.JUnitXMLReporter</value>
-                        </property>
                     </properties>
                 </configuration>
             </plugin>
