@@ -5,12 +5,6 @@
         <classes>
 <!--            <class name="com.askomdch.tests.PlaceOrderTest"/>-->
              <class name="com.askomdch.tests.LoginTest"/>
-            <testsuite name="TestSuite">
-                <testng-results>
-
-                </testng-results>
-
-            </testsuite>
         </classes>
     </test>
 </suite>
