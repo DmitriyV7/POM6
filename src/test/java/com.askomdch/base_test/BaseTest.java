@@ -8,18 +8,15 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.File;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 
 public abstract class BaseTest {
 
@@ -29,11 +26,11 @@ public abstract class BaseTest {
 
     @BeforeTest
     public void beforeTest(){
-        this.reports = new ExtentReports(System.getProperty("user.dir") + "/test-report/ExtentReport.html", true);
-        this.reports.addSystemInfo("OS NAME", System.getProperty("os.name"));
-        this.reports.addSystemInfo("ENGINEER", System.getProperty("user.name"));
-        this.reports.addSystemInfo("ENVIRONMENT", "QA");
-        this.reports.addSystemInfo("JAVA VERSION", System.getProperty("java.version"));
+        reports = new ExtentReports(System.getProperty("user.dir") + "/test-report/ExtentReport.html", true);
+        reports.addSystemInfo("OS NAME", System.getProperty("os.name"));
+        reports.addSystemInfo("ENGINEER", System.getProperty("user.name"));
+        reports.addSystemInfo("ENVIRONMENT", "QA");
+        reports.addSystemInfo("JAVA VERSION", System.getProperty("java.version"));
     }
 
     @AfterTest
@@ -50,22 +47,23 @@ public abstract class BaseTest {
 
     @AfterMethod
     public void tearDown(ITestResult result) throws IOException {
-        if (result.getStatus() == ITestResult.FAILURE){
-            extentTest.log(LogStatus.FAIL, "TEST CASE FAILED: " + result.getName());
-            extentTest.log(LogStatus.FAIL, "ERROR MESSAGE: " + result.getThrowable());
-            String screenshotPath = getScreenshot(driver, result.getName());
-            extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));
-        }else if (result.getStatus() == ITestResult.SKIP){
-            extentTest.log(LogStatus.SKIP, "TEST CASE SKIPPED: " + result.getName());
+        if (extentTest != null) {
+            if (result.getStatus() == ITestResult.FAILURE){
+                extentTest.log(LogStatus.FAIL, "TEST CASE FAILED: " + result.getName());
+                extentTest.log(LogStatus.FAIL, "ERROR MESSAGE: " + result.getThrowable());
+                String screenshotPath = getScreenshot(driver, result.getName());
+                extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));
+            } else if (result.getStatus() == ITestResult.SKIP){
+                extentTest.log(LogStatus.SKIP, "TEST CASE SKIPPED: " + result.getName());
+            } else if (result.getStatus() == ITestResult.SUCCESS){
+                extentTest.log(LogStatus.PASS, "TEST CASE PASSED: " + result.getName());
+            }
+            reports.endTest(extentTest);
         }
-        else if (result.getStatus() == ITestResult.SUCCESS){
-            extentTest.log(LogStatus.PASS, "TEST CASE PASSED: " + result.getName());
-        }
-        reports.endTest(extentTest);
         Driver.quitDriver();
     }
 
-    private static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
+    private String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
