@@ -57,3 +57,9 @@ jobs:
               sed -i '/<suite/d' "$file"
               sed -i '/<\/suite>/d' "$file"
             done
+
+workflows:
+  version: 2
+  sample:
+    jobs:
+      - build-and-test
