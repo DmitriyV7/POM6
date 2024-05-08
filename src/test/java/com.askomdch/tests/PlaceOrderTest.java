@@ -72,7 +72,7 @@ public class PlaceOrderTest extends BaseTest {
         Thread.sleep(3000);
     }
 
-//    @DataProvider(name = "order")
+    @DataProvider(name = "order")
     public Object[][] getData() {
         ExcelReader reader = new ExcelReader("src/main/resources/test_data/Test_Data.xlsx", "order");
         return reader.getData();
