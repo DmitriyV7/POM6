@@ -5,7 +5,6 @@
         <classes>
              <class name="com.askomdch.tests.PlaceOrderTest"/>
              <class name="com.askomdch.tests.LoginTest"/>
-
         </classes>
     </test>
 </suite>
