@@ -11,7 +11,7 @@ import java.util.Map;
 
 
 public class PlaceOrderTest extends BaseTest {
-//    @Test(dataProvider = "order")
+    @Test(dataProvider = "order")
     public void PlaceOrderTestAsGuest(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order Test As Guest");
         HomePage homePage = new HomePage(driver);
@@ -30,7 +30,7 @@ public class PlaceOrderTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"Guest User successfully landed on the Home page after checkout");
     }
 
-//    @Test(dataProvider = "order")
+    @Test(dataProvider = "order")
     public void PlaceOrderAsRegisteredUser(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order As Registered User");
         HomePage homePage = new HomePage(driver);
@@ -53,7 +53,7 @@ public class PlaceOrderTest extends BaseTest {
         extentTest.log(LogStatus.PASS,"User placed an order in store as a Registered user successfully");
     }
 
-//    @Test(dataProvider = "order")
+    @Test(dataProvider = "order")
     public void PlaceOrderAnCreateAccount(Map<String, String> data) throws InterruptedException {
         extentTest = reports.startTest("Place Order An Create Account");
         HomePage homePage = new HomePage(driver);
@@ -72,7 +72,7 @@ public class PlaceOrderTest extends BaseTest {
         Thread.sleep(3000);
     }
 
-//    @DataProvider(name = "order")
+    @DataProvider(name = "order")
     public Object[][] getData() {
         ExcelReader reader = new ExcelReader("src/main/resources/test_data/Test_Data.xlsx", "order");
         return reader.getData();

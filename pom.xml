@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.faker.version>1.0.2</java.faker.version>
         <!--        https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java-->
-        <selenium.java.version>4.20.0</selenium.java.version>
+        <selenium.java.version>4.21.0</selenium.java.version>
         <!--        https://mvnrepository.com/artifact/org.testng/testng-->
         <testng.version>7.10.2</testng.version>
         <!--        https://mvnrepository.com/artifact/com.aventstack/extentreports-->
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.20.0</version>
+            <version>4.21.0</version>
         </dependency>
         <dependency>
             <groupId>com.relevantcodes</groupId>
@@ -60,7 +60,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>4.20.0</version>
+            <version>4.21.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->

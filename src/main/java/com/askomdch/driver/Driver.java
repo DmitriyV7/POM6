@@ -22,9 +22,9 @@ public class Driver {
                     WebDriverManager.chromedriver().clearDriverCache().setup();
                     WebDriverManager.chromedriver().clearResolutionCache().setup();
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless"); // Run in headless mode
+//                    options.addArguments("--headless"); // Run in headless mode
                     options.addArguments("--no-sandbox"); // Bypass OS security model
-                    options.addArguments("--disable-gpu"); // Applicable to windows os only
+                    options.addArguments("--disable-gpu"); // Applicable to Windows os only
                     options.addArguments("--window-size=1920,1080");
 //                    options.addArguments("--start-maximized"); // Maximize the browser on start
                     options.addArguments("--enable-automation");

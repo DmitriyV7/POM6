@@ -14,7 +14,6 @@ import java.util.Map;
  */
 public class ExcelReader {
 
-    private XSSFWorkbook workbook; //think of workbook as an entire excel file
     private XSSFSheet worksheet; //represents a particular sheet of an excel file
 
     public ExcelReader(String filePath, String sheetName){
@@ -22,7 +21,8 @@ public class ExcelReader {
         File file = new File(filePath); //create a java file object
         try {
             FileInputStream fis = new FileInputStream(file); //file input stream object
-            workbook = new XSSFWorkbook(fis);
+            //think of workbook as an entire excel file
+            XSSFWorkbook workbook = new XSSFWorkbook(fis);
             worksheet = workbook.getSheet(sheetName);
             workbook.close();
         } catch (Exception e) {
